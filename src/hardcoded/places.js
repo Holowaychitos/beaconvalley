@@ -10,7 +10,7 @@ module.exports = {
       latitude: 20.710348,
       longitude: -103.412186,
       animateDrop: true,
-      title: 'Andares'
+      title: "Chilli's"
     },
     {
       id: '2',
@@ -45,7 +45,7 @@ module.exports = {
       latitude: 20.708892,
       longitude: -103.414128,
       animateDrop: true,
-      title: 'Instituto de Fertilidad'
+      title: 'Instituto F'
     },
     {
       id: '7',
