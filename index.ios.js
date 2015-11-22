@@ -19,18 +19,16 @@ const beaconValley = React.createClass({
       renderScene={(currentRoute, navigator) => {
         const RouteComponent = Routes[currentRoute.route]
 
-        return <RouteComponent currentRoute={currentRoute} onBack={() => {
-          console.log('backkk')
-          navigator.pop()
-        }} onSelectPlace={(place) => {
-          console.log(place)
-
-          navigator.push({
-            name: place.name,
-            code: place.code,
-            route: 'SINGLEPLACE'
-          })
-        }} />
+        return <RouteComponent
+          currentRoute={currentRoute}
+          onBack={navigator.pop}
+          onSelectPlace={(place) => {
+            navigator.push({
+              name: place.name,
+              code: place.code,
+              route: 'SINGLEPLACE'
+            })
+          }} />
       }}/>
   }
 })

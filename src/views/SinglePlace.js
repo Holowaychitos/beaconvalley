@@ -17,7 +17,6 @@ const SinglePlace = React.createClass({
 
   render () {
     const {currentRoute, onBack} = this.props
-
     const placeObject = PlacesList[currentRoute.code]
 
     return (
@@ -43,9 +42,13 @@ const SinglePlace = React.createClass({
               Mapa de tu misión:
             </Text>
 
-            <MapView showsUserLocation={true} showsPointsOfInterest={true} style={{
-              height: 200
-            }} />
+            <MapView
+              annotations={placeObject.places}
+              showsUserLocation
+              showsPointsOfInterest
+              style={{
+                height: 200
+              }} />
 
             <Button>
               <Text>Me interesa</Text>
