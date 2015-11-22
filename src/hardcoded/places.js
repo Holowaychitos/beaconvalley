@@ -3,7 +3,20 @@ module.exports = {
     name: 'Guadalajara de noche',
     subtitle: 'La lupita, la chiquirruquis...',
     code: 'NIGHT',
-    imageUrl: 'https://d7cc6r9c9cz1k.cloudfront.net/original/original_56516996e5e3f7a662aa72d2.jpg'
+    imageUrl: 'https://d7cc6r9c9cz1k.cloudfront.net/original/original_56516996e5e3f7a662aa72d2.jpg',
+    places: [{
+      id: '1',
+      latitude: 1,
+      longitude: 2,
+      animateDrop: true,
+      title: 'Nombre'
+    }, {
+      id: '2',
+      latitude: 3,
+      longitude: 4,
+      animateDrop: true,
+      title: 'Nombre'
+    }]
   },
   HISTORY: {
     name: 'Centro histórico',

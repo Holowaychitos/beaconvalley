@@ -3,7 +3,7 @@ import NativeUI from 'react-native-ui'
 
 const PlacesList = require('../hardcoded/places.js')
 
-const {Text, View, TouchableOpacity, Image} = React
+const {Text, View, TouchableOpacity, Image, MapView} = React
 const {ColoredView, Button} = NativeUI
 
 const SinglePlace = React.createClass({
@@ -35,11 +35,18 @@ const SinglePlace = React.createClass({
           <Image source={{
             uri: placeObject.imageUrl
           }} style={{
-            height: 300
+            height: 200
           }} />
 
           <View style={styles.container}>
-            <Text>{placeObject.subtitle}</Text>
+            <Text style={styles.subtitle}>
+              Mapa de tu misión:
+            </Text>
+
+            <MapView showsUserLocation={true} showsPointsOfInterest={true} style={{
+              height: 200
+            }} />
+
             <Button>
               <Text>Me interesa</Text>
             </Button>
@@ -53,6 +60,11 @@ const SinglePlace = React.createClass({
 const styles = {
   container: {
     padding: 15
+  },
+  subtitle: {
+    fontSize: 16,
+    fontWeight: '300',
+    paddingBottom: 5
   }
 }
 
