@@ -27,7 +27,7 @@ const beaconValley = React.createClass({
 
           navigator.push({
             name: place.name,
-            code: place.name,
+            code: place.code,
             route: 'SINGLEPLACE'
           })
         }} />

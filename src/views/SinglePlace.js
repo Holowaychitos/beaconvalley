@@ -1,8 +1,10 @@
 import React from 'react-native'
 import NativeUI from 'react-native-ui'
 
-const {Text, View, TouchableOpacity} = React
-const {ColoredView} = NativeUI
+const PlacesList = require('../hardcoded/places.js')
+
+const {Text, View, TouchableOpacity, Image} = React
+const {ColoredView, Button} = NativeUI
 
 const SinglePlace = React.createClass({
 
@@ -16,9 +18,11 @@ const SinglePlace = React.createClass({
   render () {
     const {currentRoute, onBack} = this.props
 
+    const placeObject = PlacesList[currentRoute.code]
+
     return (
       <ColoredView
-        title={currentRoute.name}
+        title={placeObject.name}
         leftComponent={
           <TouchableOpacity onPress={onBack}>
             <Text style={{color: '#fff'}}>
@@ -27,8 +31,19 @@ const SinglePlace = React.createClass({
           </TouchableOpacity>
         }
         color='#E66000'>
-        <View style={styles.container}>
-          <Text>{currentRoute.code}</Text>
+        <View>
+          <Image source={{
+            uri: placeObject.imageUrl
+          }} style={{
+            height: 300
+          }} />
+
+          <View style={styles.container}>
+            <Text>{placeObject.subtitle}</Text>
+            <Button>
+              <Text>Me interesa</Text>
+            </Button>
+          </View>
         </View>
       </ColoredView>
     )

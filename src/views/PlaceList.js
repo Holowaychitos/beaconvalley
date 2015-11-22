@@ -1,7 +1,10 @@
 import React from 'react-native'
 import NativeUI from 'react-native-ui'
+import _ from 'lodash'
 
 const {ColoredView, ImageCard} = NativeUI
+
+const PlacesList = require('../hardcoded/places.js')
 
 const PlaceList = React.createClass({
 
@@ -14,41 +17,17 @@ const PlaceList = React.createClass({
 
     return (
       <ColoredView title='Know the World' color='#E66000'>
-        <ImageCard
-          onPress={onSelectPlace.bind(null, {
-            name: 'Guadalajara de noche',
-            code: 'NIGHT'
-          })}
-          title='Guadalajara de noche'
-          subtitle='La lupita, la chiquirruquis...'
-          imageUrl='https://d7cc6r9c9cz1k.cloudfront.net/original/original_56516996e5e3f7a662aa72d2.jpg' />
 
-        <ImageCard
-          onPress={onSelectPlace.bind(null, {
-            name: 'Centro histórico',
-            code: 'HISTORY'
-          })}
-          title='Centro histórico'
-          subtitle='Conoce la historia que formó a esta ciudad'
-          imageUrl='https://d7cc6r9c9cz1k.cloudfront.net/original/original_56516946e5e3f7a662aa72d0.jpg' />
-
-        <ImageCard
-          onPress={onSelectPlace.bind(null, {
-            name: 'Shopping',
-            code: 'SHOPPING'
-          })}
-          title='Shopping'
-          subtitle='Aprende algo dinero'
-          imageUrl='https://d7cc6r9c9cz1k.cloudfront.net/original/original_5651697be5e3f7a662aa72d1.jpg' />
-
-        <ImageCard
-          onPress={onSelectPlace.bind(null, {
-            name: 'Tequila Mágico',
-            code: 'TEQUILA'
-          })}
-          title='Tequila Mágico'
-          subtitle='Tequila tour'
-          imageUrl='https://d7cc6r9c9cz1k.cloudfront.net/original/original_56517528e5e3f7a662aa72da.jpg' />
+        {_.map(PlacesList, place => {
+          return <ImageCard
+            onPress={onSelectPlace.bind(null, {
+              name: place.name,
+              code: place.code
+            })}
+            title={place.name}
+            subtitle={place.subtitle}
+            imageUrl={place.imageUrl} />
+        })}
 
       </ColoredView>
     )
