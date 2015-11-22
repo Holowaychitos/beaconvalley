@@ -5,7 +5,7 @@ import _ from 'lodash'
 const PlacesList = require('../hardcoded/places.js')
 
 const {Text, View, TouchableOpacity, Image, MapView} = React
-const {ColoredView, Button} = NativeUI
+const {ColoredView, Button, ProgressBar} = NativeUI
 
 const SinglePlace = React.createClass({
 
@@ -40,11 +40,16 @@ const SinglePlace = React.createClass({
 
           <View style={styles.container}>
             <Text style={styles.subtitle}>
+              Tu progreso en esta misión:
+            </Text>
+            <ProgressBar progress={0.25} />
+
+            <Text style={styles.subtitle}>
               Tus objetivos:
             </Text>
 
             {_.map(placeObject.places, (place, index) => {
-              return <Text key={index}>
+              return <Text key={index} style={index < 5 ? styles.striked : {}}>
                 {place.title}
               </Text>
             })}
@@ -73,13 +78,18 @@ const SinglePlace = React.createClass({
 
 const styles = {
   container: {
-    padding: 15
+    padding: 15,
+    paddingTop: 0
   },
   subtitle: {
     fontSize: 16,
     fontWeight: '300',
-    paddingTop: 8,
+    paddingTop: 16,
     paddingBottom: 8
+  },
+  striked: {
+    color: '#0a0',
+    textDecorationLine: 'line-through'
   }
 }
 
