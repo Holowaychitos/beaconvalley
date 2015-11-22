@@ -45,13 +45,34 @@ module.exports = {
       title: 'Superama'
     },
     {
+      id: '4',
+      latitude: 220.709334,
+      longitude: -103.414160,
+      animateDrop: true,
+      title: 'H. Puerta de Hierro'
+    },
+    {
+      id: '4',
+      latitude: 20.708892,
+      longitude: -103.414128,
+      animateDrop: true,
+      title: 'Instituto de Fertilidad'
+    },
+    {
+      id: '4',
+      latitude: 20.707849,
+      longitude: -103.412852,
+      animateDrop: true,
+      title: 'Mercedes Benz'
+    },
+    {
       id: '5',
       latitude: 20.712465,
       longitude: -103.411972,
       animateDrop: true,
       title: 'Liverpool'
     }]
-    
+
   },
   TEQUILA: {
     name: 'Tequila Mágico',
