@@ -9,7 +9,7 @@ module.exports = {
       latitude: 20.710348,
       longitude: -103.412186,
       animateDrop: true,
-      title: 'Andares'
+      title: "Chilli's"
     },
     {
       id: '2',
@@ -33,28 +33,28 @@ module.exports = {
       title: 'Superama'
     },
     {
-      id: '4',
+      id: '5',
       latitude: 220.709334,
       longitude: -103.414160,
       animateDrop: true,
       title: 'H. Puerta de Hierro'
     },
     {
-      id: '4',
+      id: '6',
       latitude: 20.708892,
       longitude: -103.414128,
       animateDrop: true,
-      title: 'Instituto de Fertilidad'
+      title: 'Instituto F'
     },
     {
-      id: '4',
+      id: '7',
       latitude: 20.707849,
       longitude: -103.412852,
       animateDrop: true,
       title: 'Mercedes Benz'
     },
     {
-      id: '5',
+      id: '8',
       latitude: 20.712465,
       longitude: -103.411972,
       animateDrop: true,
