@@ -15,7 +15,7 @@ module.exports = {
     name: 'Shopping',
     subtitle: 'Aprende algo dinero',
     code: 'SHOPPING',
-    imageUrl: 'https://d7cc6r9c9cz1k.cloudfront.net/original/original_5651697be5e3f7a662aa72d1.jpg'
+    imageUrl: 'https://d7cc6r9c9cz1k.cloudfront.net/original/original_5651697be5e3f7a662aa72d1.jpg',
     places: [{
       id: '1',
       latitude: 20.710348,
@@ -51,7 +51,7 @@ module.exports = {
       animateDrop: true,
       title: 'Liverpool'
     }]
-    
+
   },
   TEQUILA: {
     name: 'Tequila Mágico',

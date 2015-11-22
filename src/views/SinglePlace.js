@@ -1,5 +1,6 @@
 import React from 'react-native'
 import NativeUI from 'react-native-ui'
+import _ from 'lodash'
 
 const PlacesList = require('../hardcoded/places.js')
 
@@ -39,6 +40,16 @@ const SinglePlace = React.createClass({
 
           <View style={styles.container}>
             <Text style={styles.subtitle}>
+              Tus objetivos:
+            </Text>
+
+            {_.map(placeObject.places, (place, index) => {
+              return <Text key={index}>
+                {place.title}
+              </Text>
+            })}
+
+            <Text style={styles.subtitle}>
               Mapa de tu misión:
             </Text>
 
@@ -47,7 +58,7 @@ const SinglePlace = React.createClass({
               showsUserLocation
               showsPointsOfInterest
               style={{
-                height: 200
+                height: 250
               }} />
 
             <Button>
@@ -67,7 +78,8 @@ const styles = {
   subtitle: {
     fontSize: 16,
     fontWeight: '300',
-    paddingBottom: 5
+    paddingTop: 8,
+    paddingBottom: 8
   }
 }
 
