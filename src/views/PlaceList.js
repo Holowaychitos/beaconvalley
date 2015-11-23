@@ -18,8 +18,9 @@ const PlaceList = React.createClass({
     return (
       <ColoredView title='Know the World' color='#E66000'>
 
-        {_.map(PlacesList, place => {
+        {_.map(PlacesList, (place, index) => {
           return <ImageCard
+            key={index}
             onPress={onSelectPlace.bind(null, {
               name: place.name,
               code: place.code
